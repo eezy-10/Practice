@@ -20,9 +20,9 @@
     <title>Aura & Matter</title>
   </head>
   <body class="box-border">
-    <header class="lg:mx-16">
+    <header class="">
       <nav
-        class="sticky flex items-center justify-around lg:justify-between md:m-8 m-4 lg:m-2 md:px-2 lg:px-8 px-8 py-4 bg-white/30 mix-blend-overlay shadow-md rounded-md"
+        class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] flex items-center z-50 bg-[#faf9f7]/80 backdrop-blur-md justify-around lg:justify-between px-8 py-4 shadow-md rounded-md" id="nav"
       >
         <h1 class="text-2xl italic font-serif">Aura & Matter</h1>
         <div
@@ -45,9 +45,10 @@
     </header>
     <main class="">
       <section
-        class="lg:mx-24 mx-6 md:flex md:items-end md:gap-20 lg:gap-44 lg:justify-between my-12"
+        class="pt-44 pb-16"
         id="hero-section"
       >
+      <div class="max-w-7xl mx-auto px-8 md:flex md:items-end md:gap-20 lg:gap-44 lg:justify-between">
         <h1
           class="text-7xl font-serif my-12 md:my-0 md:tracking-tighter tracking-[-0.3rem] leading-none"
         >
@@ -63,15 +64,18 @@
             Identity & Visual Narrative
           </p>
         </div>
+        </div>
       </section>
       <section class="lg:mx-24 mx-6 my-24" id="the-brief">
+        <div class="max-w-7xl mx-auto px-2">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuClXXU8KC_9dQQtIJ-ISijQsMP3GxO2GJoxl4MDH_6hqiFe2MM3TWsZo8p4Nn3s1paq4TYH8NzgfTPsn4CBRtMrudHcO8iy4QSshbfQiiOlQTfgMaXLHzRtu2f8pjuWCVvwvjpD4-2oojg49dfvjJUW7qi50N0bzqWH9-7t-JMMAgKdntUyyYv3cUPx_5VF3pyyFQF-bJoTBR6G3dw2gw0VMTJShBfPq50pNlNdi5bvMlnJG-mkydwsxQCVhOcb7N9yTY9xDDXDIbZx"
-          class="min-w-full h-[28vh] md:h-[60vh] rounded-md"
+          class="w-full h-[28vh] md:h-[60vh] rounded-md"
         />
+        </div>
       </section>
       <section
-        class="lg:mx-24 mx-6 md:grid md:grid-cols-12 md:gap-12 my-12"
+        class="max-w-7xl mx-auto px-8 md:grid md:grid-cols-12 md:gap-12 my-12"
         id="the-brief"
       >
         <div class="my-10 md:col-span-4">
@@ -152,7 +156,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div class="aspect-[4/5] rounded-md overflow-hidden mb-5 shadow-sm">
+            <div class="aspect-4/5 rounded-md overflow-hidden mb-5 shadow-sm">
               <div class="h-1/2 bg-[#b02f00]"></div>
               <div class="h-1/4 bg-[#faf9f7]"></div>
               <div class="h-1/4 bg-[#1a1c1b]"></div>
@@ -168,7 +172,7 @@
 
           <div>
             <div
-              class="aspect-[4/5] rounded-md p-6 md:p-8 mb-5 bg-stone-50 shadow-sm flex flex-col justify-center"
+              class="aspect-4/5 rounded-md p-6 md:p-8 mb-5 bg-stone-50 shadow-sm flex flex-col justify-center"
             >
               <div class="border-b border-stone-200 pb-4 mb-4">
                 <span class="font-serif text-3xl md:text-4xl block">Aa</span>
@@ -199,7 +203,7 @@
 
           <div>
             <div
-              class="aspect-[4/5] rounded-md overflow-hidden mb-5 shadow-sm group"
+              class="aspect-4/5 rounded-md overflow-hidden mb-5 shadow-sm group"
             >
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKUujRXWni6HoMvZVgtXuHr6zplx4YyYgAOz4kXOskMicqwrs5HW2g__Vcef3w_3aDrkvn16gYU9-KeW_qkdeIu8S0bU5LVeS4xopcTl6ZwSQvDqLgJyPxQd8whBtOtgOT8e8D_GLo07cGUYtg4cNNQ8C4zCNxS5-QTKo3iwMcx3q8aRaB1-hpM4p9N2fPoppqmBPZDqFi6H7Be46Pqe_Fgt_LT-_MfsQ9YjXYvsApp2f4lozIx7f2XjVBFHX2SMt8xjbq50Senfws"
@@ -218,6 +222,7 @@
         </div>
       </section>
       <section class="max-w-7xl mx-auto px-8 mb-48" id="the-result">
+        <div class="max-w-7xl mx-auto px-8">
         <div class="text-center mb-24 mt-40">
           <p
             class="text-orange-700 uppercase tracking-[0.3em] text-[0.7rem] mb-4"
@@ -227,7 +232,7 @@
           <h2 class="font-serif text-5xl italic">Brand Assets</h2>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[1000px] md:h-[800px]"
+          class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-250 md:h-200"
         >
           <div
             class="md:col-span-2 md:row-span-2 bg-surface-container-high rounded-lg overflow-hidden group"
@@ -266,6 +271,7 @@
             />
           </div>
         </div>
+        </div>
       </section>
       <section class="bg-gray-100 py-32 mb-48" id="technical-execution">
         <div class="max-w-7xl mx-auto px-8">
@@ -302,7 +308,7 @@
               </div>
             </div>
             <div class="grid grid-cols-2 gap-8">
-              <div class="bg-black/[0.03] p-8 rounded-sm">
+              <div class="bg-black/3 p-8 rounded-sm">
                 <p
                   class="text-stone-400 uppercase tracking-widest text-[0.6rem] mb-4"
                 >
@@ -310,7 +316,7 @@
                 </p>
                 <p class="font-serif text-lg">Next.js 14</p>
               </div>
-              <div class="bg-black/[0.03] p-8 rounded-sm">
+              <div class="bg-black/3 p-8 rounded-sm">
                 <p
                   class="text-stone-400 uppercase tracking-widest text-[0.6rem] mb-4"
                 >
@@ -318,7 +324,7 @@
                 </p>
                 <p class="font-serif text-lg">Tailwind + Framer</p>
               </div>
-              <div class="bg-black/[0.03] p-8 rounded-sm">
+              <div class="bg-black/3 p-8 rounded-sm">
                 <p
                   class="text-stone-400 uppercase tracking-widest text-[0.6rem] mb-4"
                 >
@@ -326,7 +332,7 @@
                 </p>
                 <p class="font-serif text-lg">Sanity Headless</p>
               </div>
-              <div class="bg-black/[0.03] p-8 rounded-sm">
+              <div class="bg-black/0.03 p-8 rounded-sm">
                 <p
                   class="text-stone-400 uppercase tracking-widest text-[0.6rem] mb-4"
                 >
@@ -692,9 +698,9 @@
               >Terms of Service</a
             >
           </div>
-          <button
+          <a
             class="flex items-center gap-3 group"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            href="#nav"
           >
             <span
               class="hover:cursor-pointer text-[0.6rem] uppercase tracking-[0.2em] text-stone-500 group-hover:text-orange-700"
@@ -704,7 +710,7 @@
               class="material-symbols-outlined text-stone-400 text-[1rem] group-hover:text-orange-700 group-hover:-translate-y-1 transition-all"
               ><i class="fa-solid fa-arrow-up"></i></span
             >
-          </button>
+          </a>
         </div>
       </div>
     </footer>
