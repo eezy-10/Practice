@@ -497,6 +497,56 @@ nav {
   text-transform: uppercase;
   font-size: 0.6rem;
 }
+/* Section */
+.team-section {
+  margin-bottom: 12rem; /* mb-48 */
+  border-top: 1px solid #e7e5e4; /* border-stone-200 */
+  padding-top: 8rem; /* pt-32 */
+}
+
+/* Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem; /* gap-12 */
+}
+
+/* Heading */
+.team-heading h2 {
+  font-family: var(--page-font);
+  font-size: 1.875rem; /* text-3xl */
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Right side grid */
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem; /* gap-y-12 */
+  column-gap: 2rem; /* gap-x-8 */
+  font-family: var(--updated-font);
+}
+
+/* Item */
+.team-label {
+  color: var(--gray-border); /* text-stone-400 */
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  margin-bottom: 0.8rem; /* mb-2 */
+}
+
+.team-name {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 100;
+}
+@media (min-width: 640px) {
+  .team-list {
+    grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+  }
+}
 @media (min-width: 768px) {
   nav {
     justify-content: space-around;
@@ -603,6 +653,15 @@ nav {
   }
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .team-heading {
+    grid-column: span 4;
+  }
+  .team-list {
+    grid-column: span 8;
   }
 }
 @media (min-width: 1024px) {
