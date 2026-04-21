@@ -59,10 +59,10 @@ nav {
   padding-inline: 2rem;
 }
 .hero-text {
-  font-size: 4.5rem;
+  font-size: 4.3rem;
   margin-top: 4.8rem;
   margin-bottom: 4rem;
-  letter-spacing: 0rem;
+  letter-spacing: -0.1rem;
   line-height: 0.9;
   font-weight: 500;
 }
@@ -102,11 +102,10 @@ nav {
 }
 #the-brief {
   font-family: var(--para-font);
-  margin-block: 5.5rem 7rem;
+  margin-block: 5.5rem 8.5rem;
 }
 .brief-heading {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-block: 2.5rem;
 }
 .brief-heading h1 {
   font-size: 2.25rem; /* text-4xl */
@@ -115,32 +114,29 @@ nav {
   margin-bottom: 1.5rem; /* mb-4 */
 }
 .brief-underline {
-  background-color: #c2410c; /* bg-orange-700 */
+  background-color: var(--brown-color); /* bg-orange-700 */
   width: 3rem; /* w-12 */
-  height: 0.13rem; /* h-[0.15rem] */
+  height: 0.15rem; /* h-[0.15rem] */
 }
 .brief-content {
-    word-spacing: -0.1em;
-  margin-top: 2.5rem; /* my-10 */
   margin-bottom: 2.5rem;
   font-weight: 300; /* font-light */
 }
 .brief-one {
+  word-spacing: -0.05em;
   line-height: 1.6;
-  font-weight: 400;
   font-size: 1.3rem; /* text-2xl */
   color: rgba(0, 0, 0, 0.6); /* text-black/60 */
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
 }
 .brief-two {
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 1.125rem; /* text-lg */
   color: rgba(0, 0, 0, 0.4); /* text-black/40 */
   font-weight: 500;
 }
 .grid{
     display: grid;
-    gap: 4rem;
 }
 #the-process{
     font-family: var(--para-font);
@@ -391,11 +387,13 @@ nav {
   }
   .grid {
     grid-template-columns: repeat(12, 1fr);
+    gap: 4rem;
   }
   .brief-heading {
     grid-column: span 4;
   }
   .brief-content {
+    margin-top: 2.5rem;
     grid-column: 6 / span 7; /* md:col-span-8 */
   }
   .process-grid {
