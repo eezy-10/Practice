@@ -9,11 +9,13 @@ body {
 }
 :root {
   --bg-color: #f2f0ee;
-  --sm-box-bg-color: #efeeec;
+  --sm-box-bg-color: #e9e8e6;
   --brown-color: #b02e01;
   --gray-text: #75706c;
+  --gray-border: #a8a29e;
   --page-font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --para-font: "Inter", sans-serif;
+  --updated-font: Arial, Helvetica, sans-serif;
 }
 nav {
   position: fixed;
@@ -242,15 +244,18 @@ nav {
 /* Card common */
 .design-card h4 {
   font-family: serif;
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.375rem; /* text-lg */
   font-style: italic;
   margin-bottom: 0.5rem;
+  font-weight: 100;
 }
 
 .design-card p {
   font-size: 0.875rem; /* text-sm */
-  color: #78716c; /* text-stone-500 */
+  color: var(--gray-text); /* text-stone-500 */
   line-height: 1.625; /* leading-relaxed */
+  font-family: var(--para-font);
+  letter-spacing: 0.03em;
 }
 
 /* Box (aspect 4/5) */
@@ -260,9 +265,9 @@ nav {
 
 /* Color box */
 .color-box {
-  border-radius: 0.375rem;
+  border-radius: 0.25rem;
   overflow: hidden;
-  margin-bottom: 1.25rem; /* mb-5 */
+  margin-bottom: 1.5rem; /* mb-5 */
   box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* shadow-sm */
 }
 
@@ -273,7 +278,7 @@ nav {
 
 .color-box .quarter-white {
   height: 25%;
-  background-color: white;
+  background-color: inherit;
 }
 
 .color-box .quarter-black {
@@ -283,10 +288,10 @@ nav {
 
 /* Typography card */
 .typography-box {
-  border-radius: 0.375rem;
-  padding: 1.5rem;
-  margin-bottom: 1.25rem;
-  background-color: #fafaf9; /* bg-stone-50 */
+  border-radius: 0.25rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--sm-box-bg-color);
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
@@ -294,21 +299,27 @@ nav {
 }
 
 .typography-box .top {
-  border-bottom: 1px solid #e7e5e4; /* border-stone-200 */
+  border-bottom: 1px solid rgba(132, 132, 132, 0.2);
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
 .typography-box span:first-child {
   display: block;
-  font-size: 1.875rem;
+  font-size: 2.25rem;
+}
+
+.font-Manrope{
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 
 .typography-box span:last-child {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
+  font-family: var(--para-font);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #a8a29e;
+  letter-spacing: 0.06em;
+  color: rgba(132, 132, 132, 0.6);
 }
 
 /* Image card */
@@ -329,6 +340,54 @@ nav {
 }
 
 .image-box:hover img {
+  transform: scale(1.05);
+}
+/* Section */
+.result-section {
+  margin-bottom: 12rem; /* mb-48 */
+}
+
+/* Header */
+.result-header {
+  text-align: center;
+  margin-top: 10rem;  /* mt-40 */
+  margin-bottom: 6rem; /* mb-24 */
+}
+
+.result-header p {
+  color: var(--brown-color); /* text-orange-700 */
+  text-transform: uppercase;
+  font-family: var(--updated-font);
+  letter-spacing: 0.3em; /* tracking-[0.3em] */
+  font-size: 0.7rem; /* text-[0.7rem] */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.result-header h2 {
+  font-family: serif;
+  font-size: 3rem; /* text-5xl */
+  font-style: italic;
+}
+
+/* Grid */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* gap-4 */
+  height: 62.5rem; /* h-250 */
+}
+.result-item {
+  border-radius: 0.25rem; /* rounded-md */
+  overflow: hidden;
+  position: relative;
+}
+.result-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.result-item:hover img {
   transform: scale(1.05);
 }
 @media (min-width: 768px) {
@@ -399,12 +458,10 @@ nav {
   .process-grid {
     grid-template-columns: repeat(12, 1fr);
   }
-
   .process-content {
     grid-column: span 7;
     z-index: 10;
   }
-
   .process-image-wrapper {
     grid-column: span 6;
     position: absolute;
@@ -416,17 +473,26 @@ nav {
   .design-header h2 {
     font-size: 2.25rem; /* md:text-4xl */
   }
-
   .design-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .typography-box {
     padding: 2rem; /* md:p-8 */
   }
-
   .typography-box span:first-child {
     font-size: 2.25rem;
+  }
+  .result-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 50rem; /* md:h-200 */
+  }
+  .result-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .result-wide {
+    grid-column: span 2;
   }
 }
 @media (min-width: 1024px) {
