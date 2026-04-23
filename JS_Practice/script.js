@@ -1,4 +1,5 @@
 let display = document.getElementById("display");
+const e = 2.71828, pi = 3.14159;
 
 window.onload = function() {
   display.focus();
@@ -113,29 +114,32 @@ function cosine(x) {
   return sum;
 }
 
-document.addEventListener("keydown", function(event) {
-  let key = event.key;
+document.addEventListener("keydown", function(e) {
+  let key = e.key;
 
   // Allow numbers
   if ((key >= '0' && key <= '9') || key === '.') {
+    e.preventDefault();
     press(key);
     console.log(document.value);
   }
 
   // Operators
   else if (key === '+' || key === '-' || key === '*' || key === '/') {
+    e.preventDefault();
     press(key);
   }
 
   // Enter = calculate
   else if (key === 'Enter') {
-    event.preventDefault();
+    e.preventDefault();
     calculate();
   }
 
   // Backspace = delete last character
   else if (key === 'Backspace') {
-    display.value = display.value.slice(0, -1);
+    e.preventDefault();
+    delPrevious();
   }
 
   // Escape = clear
