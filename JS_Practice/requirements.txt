@@ -1,0 +1,75 @@
+REQUIREMENT SHEET — Scientific Calculator (Evaluation Assignment)
+
+1. Objective
+
+Build a Scientific Calculator Web App using Vanilla JavaScript.
+
+The goal is to evaluate:
+	•	JavaScript fundamentals
+	•	Code structure & modularity
+	•	State management
+	•	Ability to apply patterns appropriately
+
+2. Functional Requirements
+
+2.1 Basic Operations
+	•	+ - * /
+	•	Decimal support
+	•	Chained operations
+	•	Operator precedence must be respected
+
+2.2 Scientific Functions
+
+Must support:
+	•	sin(x), cos(x), tan(x)
+	•	log(x) (base 10)
+	•	ln(x)
+	•	x², x³
+	•	√x
+	•	1/x
+	•	x^y
+	•	Factorial !
+
+Constants:
+	•	π
+	•	e
+
+Expression Handling
+•	Must handle parentheses
+	•	Must NOT use eval()
+
+👉 Forces:
+	•	parsing logic (Shunting Yard OR custom parser)
+
+⸻
+
+2.4 Modes
+	•	Degree / Radian toggle
+
+⸻
+
+2.5 Input
+	•	Button input
+	•	Keyboard support
+	•	Prevent invalid sequences
+
+⸻
+
+2.6 Error Handling
+	•	Divide by zero
+	•	Invalid expressions
+	•	Domain errors:
+	•	log(-1)
+	•	√(-x)
+	•	Display meaningful errors
+
+⸻
+
+3. Technical Requirements (THIS is the real filter)
+
+3.2 JavaScript Concepts (MANDATORY)
+
+✅ Closures
+	•	Must be used for:
+	•	state encapsulation
+	•	private variables
