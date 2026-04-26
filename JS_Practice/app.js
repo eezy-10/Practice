@@ -10,9 +10,6 @@ const Calculator = (function () {
     getExpression() {
       return expression;
     },
-    toggleMode() {
-      mode = mode === "DEG" ? "RAD" : "DEG";
-    },
     setMode(newMode) {
       mode = newMode;
     },
@@ -388,9 +385,7 @@ document.addEventListener("click", () => {
 
 function preprocess(expr) {
 
-  if (expr[0] === "-" || expr[0] === "+") {
-    expr = "0" + expr;
-  }
+  if (expr[0] === "-") expr = "0" + expr;
 
   expr = expr.replace(/(\d)\(/g, "$1*(");
 
