@@ -1,5 +1,6 @@
 const Calculator = (function () {
   let expression = "", mode = "DEG"; // DEG or RAD 
+
   return {
     add(value) {
       expression += value;
@@ -28,7 +29,9 @@ const precedence = {
   "!": 4
 };
 
+
 const PI = 3.141592653589793, E = 2.718281828459045;
+
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".btn");
 
@@ -93,6 +96,8 @@ function updateDisplay() {
   display.value = Calculator.getExpression();
 }
 
+
+
 function mapInput(val) {
   switch (val) {
     case "π": return "π";
@@ -116,6 +121,9 @@ function toPostfix(tokens) {
 
   tokens.forEach(token => {
     if (!isNaN(token)) {
+      output.push(token);
+    }
+    else if (token === "π" || token === "e") {
       output.push(token);
     }
     else if (["sin", "cos", "tan", "log", "ln", "√"].includes(token)) {
@@ -147,6 +155,7 @@ function toPostfix(tokens) {
 
   return output;
 }
+
 
 function evaluatePostfix(postfix) {
   const stack = [];
@@ -410,7 +419,9 @@ function preprocess(expr) {
   return expr;
 }
 
+
 function handleOperatorInput(expr, newOp) {
+
   if (expr.length === 0) {
     if (newOp === "-") return newOp;
     return expr;
